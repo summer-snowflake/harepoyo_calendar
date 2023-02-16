@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// ƒJƒŒƒ“ƒ_[
 public class CalendarManager : MonoBehaviour
 {
     public static CalendarManager instance = null;
