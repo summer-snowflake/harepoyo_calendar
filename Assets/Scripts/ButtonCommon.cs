@@ -7,11 +7,16 @@ public class ButtonCommon : MonoBehaviour
 {
     private Image img;
     public Material brighten;
+    public GameObject obj;
 
     private void Start()
     {
         img = GetComponent<Image>();
+    }
 
+    public void onClickButton()
+    {
+        obj.SetActive(false);
     }
 
     public void MouseOver()
