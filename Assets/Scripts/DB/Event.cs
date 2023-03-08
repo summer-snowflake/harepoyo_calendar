@@ -8,7 +8,7 @@ public class Event : ScriptableObject
 {
     public int id;
     [Header("イベント名")] public string title;
-    [Header("サムネイル")] public Sprite img;
+    [Header("サムネイル")] public Sprite thumbnail;
     [Header("開始時刻")] public string startTime;
     [Header("終了時刻")] public string endTime;
     [Header("日曜日")] public bool sunday;
