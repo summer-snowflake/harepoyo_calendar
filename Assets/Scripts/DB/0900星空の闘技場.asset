@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   title: "\u661F\u7A7A\u306E\u95D8\u6280\u5834"
-  img: {fileID: 21300000, guid: 58c60636b69fc3f40b7ecb0239af7e3c, type: 3}
+  thumbnail: {fileID: 21300000, guid: 58c60636b69fc3f40b7ecb0239af7e3c, type: 3}
   startTime: 09:01
   endTime: 09:30
   sunday: 1

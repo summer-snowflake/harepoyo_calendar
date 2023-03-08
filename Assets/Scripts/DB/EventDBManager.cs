@@ -10,7 +10,6 @@ public class EventDBManager : MonoBehaviour
     public GameObject eventItem;
     GameObject obj;
 
-
     public void AddEventData(Event e)
     {
         eventDataBase.eventList.Add(e);
@@ -34,18 +33,9 @@ public class EventDBManager : MonoBehaviour
             obj.transform.localPosition = new Vector3(0, 0, 0); 
             obj.transform.localScale = Vector3.one;
 
-
             // データを表示
             EventItem item = obj.GetComponent<EventItem>();
             item.SetEvent(e);
-
-            Debug.Log(e.title + " " + e.id);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
