@@ -1,8 +1,8 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ƒJƒŒƒ“ƒ_[
+// ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
 public class CalendarManager : MonoBehaviour
 {
     public static CalendarManager instance = null;
