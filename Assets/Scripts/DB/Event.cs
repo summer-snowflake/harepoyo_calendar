@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +7,15 @@ using UnityEngine;
 public class Event : ScriptableObject
 {
     public int id;
-    [Header("ƒCƒxƒ“ƒg–¼")] public string title;
-    [Header("ƒTƒ€ƒlƒCƒ‹")] public Sprite thumbnail;
-    [Header("ŠJn")] public string startTime;
-    [Header("I—¹")] public string endTime;
-    [Header("“ú—j“ú")] public bool sunday;
-    [Header("Œ—j“ú")] public bool monday;
-    [Header("‰Î—j“ú")] public bool tuesday;
-    [Header("…—j“ú")] public bool wednesday;
-    [Header("–Ø—j“ú")] public bool thursday;
-    [Header("‹à—j“ú")] public bool fryday;
-    [Header("“y—j“ú")] public bool saturday;
+    [Header("ã‚¤ãƒ™ãƒ³ãƒˆå")] public string title;
+    [Header("ã‚µãƒ ãƒã‚¤ãƒ«")] public Sprite thumbnail;
+    [Header("é–‹å§‹æ™‚åˆ»")] public string startTime;
+    [Header("çµ‚äº†æ™‚åˆ»")] public string endTime;
+    [Header("æœˆæ›œæ—¥")] public bool monday;
+    [Header("ç«æ›œæ—¥")] public bool tuesday;
+    [Header("æ°´æ›œæ—¥")] public bool wednesday;
+    [Header("æœ¨æ›œæ—¥")] public bool thursday;
+    [Header("é‡‘æ›œæ—¥")] public bool fryday;
+    [Header("åœŸæ›œæ—¥")] public bool saturday;
+    [Header("æ—¥æ›œæ—¥")] public bool sunday;
 }
