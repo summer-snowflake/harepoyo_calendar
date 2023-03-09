@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +9,7 @@ public class EventDBManager : MonoBehaviour
     public GameObject content;
     public GameObject eventItem;
     GameObject obj;
+    GameObject grandObject;
 
     public void AddEventData(Event e)
     {
@@ -19,23 +20,28 @@ public class EventDBManager : MonoBehaviour
     void Start()
     {
         int count = eventDataBase.eventList.Count;
+        grandObject = content.transform.parent.parent.gameObject;
+        ScrollRect scrollRect = grandObject.GetComponent<ScrollRect>();
 
         for (int i = 0; i < count; i++)
         {
-            // ÉCÉxÉìÉgÉfÅ[É^ÇéÊìæ
+            // „Ç§„Éô„É≥„Éà„Éá„Éº„Çø„ÇíÂèñÂæó
             Event e = ScriptableObject.CreateInstance("Event") as Event;
             e = eventDataBase.eventList[i];
 
-            // ÉIÉuÉWÉFÉNÉgÇÃçÏê¨
+            // „Ç™„Éñ„Ç∏„Çß„ÇØ„Éà„ÅÆ‰ΩúÊàê
             obj = (GameObject)Instantiate(eventItem);
             obj.transform.SetParent(content.transform);
             RectTransform rect = obj.GetComponent <RectTransform>();
             obj.transform.localPosition = new Vector3(0, 0, 0); 
             obj.transform.localScale = Vector3.one;
 
-            // ÉfÅ[É^Çï\é¶
+            // „Éá„Éº„Çø„ÇíË°®Á§∫
             EventItem item = obj.GetComponent<EventItem>();
             item.SetEvent(e);
         }
+
+        // „Çπ„ÇØ„É≠„Éº„É´‰ΩçÁΩÆ„Çí‰∏äÈÉ®„Å´ÁßªÂãï
+        scrollRect.verticalNormalizedPosition = 1.0f;
     }
 }
