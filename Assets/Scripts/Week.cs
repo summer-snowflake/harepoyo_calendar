@@ -1,19 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using TMPro;
 
 public class Week : MonoBehaviour
 {
     public GameObject weekButton;
-    public Material brighten;
-    public Texture2D swordCursor;
     GameObject obj;
 
-    struct WeekInfo
+    public struct WeekInfo
     {
         public int id;
         public string name;
@@ -42,48 +36,8 @@ public class Week : MonoBehaviour
             obj.transform.localPosition = new Vector3(0, 0, 0);
             obj.transform.localScale = Vector3.one;
 
-            // ラベル（曜日）の設定
             DayOfWeekButton button = obj.GetComponent<DayOfWeekButton>();
-            button.SetText(weekArray[i].value);
-
-            // 今日の曜日をハイライト
-            if (weekArray[i].name == ("" + DateTime.Now.DayOfWeek))
-            {
-                Image img = obj.GetComponent<Image>();
-                img.material = brighten;
-            }
-
-            // マウスイベントの作成
-            obj.AddComponent<EventTrigger>();
-            EventTrigger trigger = obj.GetComponent<EventTrigger>();
-            EventTrigger.Entry entry1 = new EventTrigger.Entry();
-            entry1.eventID = EventTriggerType.PointerClick;
-            entry1.callback.AddListener((_eventData) => { OnClickItem(); });
-            trigger.triggers.Add(entry1);
-
-            EventTrigger.Entry entry2 = new EventTrigger.Entry();
-            entry2.eventID = EventTriggerType.PointerEnter;
-            entry2.callback.AddListener((_eventData) => { OnEnterItem(); });
-            trigger.triggers.Add(entry2);
-
-            EventTrigger.Entry entry3 = new EventTrigger.Entry();
-            entry3.eventID = EventTriggerType.PointerExit;
-            entry3.callback.AddListener((_eventData) => { OnExitItem(); });
-            trigger.triggers.Add(entry3);
+            button.SetItem(weekArray[i]);
         }
-    }
-
-    public void OnEnterItem()
-    {
-        Cursor.SetCursor(swordCursor, Vector2.zero, CursorMode.Auto);
-    }
-
-    public void OnExitItem()
-    {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-    }
-
-    public void OnClickItem()
-    {
     }
 }

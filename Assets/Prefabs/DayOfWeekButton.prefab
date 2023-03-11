@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 9133674970008403649}
   - component: {fileID: 9133674970008403651}
   - component: {fileID: 9133674970008403648}
-  - component: {fileID: 3236714984039850786}
+  - component: {fileID: 280016455629779696}
   m_Layer: 5
   m_Name: DayOfWeekButton
   m_TagString: Untagged
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3236714984039850786
+--- !u!114 &280016455629779696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,3 +225,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c26b1651ec2dd42848c8ed6f3e5122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brighten: {fileID: 2100000, guid: 0dfbf86ae9fc7bc48ba7477703ef428b, type: 2}
+  swordCursor: {fileID: 2800000, guid: a2f5dc4cd6de03240881de24dbc607ac, type: 3}
