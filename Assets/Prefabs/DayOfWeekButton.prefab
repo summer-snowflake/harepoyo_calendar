@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30A2"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82813f1595fef8e41bca7e7a81de68c5, type: 2}
   m_sharedMaterial: {fileID: -6797451426043076628, guid: 82813f1595fef8e41bca7e7a81de68c5, type: 2}
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 9133674970008403649}
   - component: {fileID: 9133674970008403651}
   - component: {fileID: 9133674970008403648}
+  - component: {fileID: 3236714984039850786}
   m_Layer: 5
   m_Name: DayOfWeekButton
   m_TagString: Untagged
@@ -212,3 +213,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3236714984039850786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133674970008403678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c26b1651ec2dd42848c8ed6f3e5122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

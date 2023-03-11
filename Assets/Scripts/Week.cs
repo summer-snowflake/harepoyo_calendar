@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class DayOfWeek : MonoBehaviour
+public class Week : MonoBehaviour
 {
     public GameObject weekButton;
     public Material brighten;
@@ -43,9 +43,8 @@ public class DayOfWeek : MonoBehaviour
             obj.transform.localScale = Vector3.one;
 
             // ラベル（曜日）の設定
-            GameObject textObj = obj.transform.Find("Text").gameObject;
-            TextMeshProUGUI titleText = textObj.GetComponent<TextMeshProUGUI>();
-            titleText.text = weekArray[i].value;
+            DayOfWeekButton button = obj.GetComponent<DayOfWeekButton>();
+            button.SetText(weekArray[i].value);
 
             // 今日の曜日をハイライト
             if (weekArray[i].name == ("" + DateTime.Now.DayOfWeek))
