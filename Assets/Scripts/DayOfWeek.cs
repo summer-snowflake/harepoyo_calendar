@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
 public class DayOfWeek : MonoBehaviour
 {
     public GameObject weekButton;
-    GameObject obj;
     public Material brighten;
+    public Texture2D swordCursor;
+    GameObject obj;
 
     struct WeekInfo
     {
@@ -51,12 +53,38 @@ public class DayOfWeek : MonoBehaviour
                 Image img = obj.GetComponent<Image>();
                 img.material = brighten;
             }
+
+            // マウスイベントの作成
+            obj.AddComponent<EventTrigger>();
+            EventTrigger trigger = obj.GetComponent<EventTrigger>();
+            EventTrigger.Entry entry1 = new EventTrigger.Entry();
+            entry1.eventID = EventTriggerType.PointerClick;
+            entry1.callback.AddListener((_eventData) => { OnClickItem(); });
+            trigger.triggers.Add(entry1);
+
+            EventTrigger.Entry entry2 = new EventTrigger.Entry();
+            entry2.eventID = EventTriggerType.PointerEnter;
+            entry2.callback.AddListener((_eventData) => { OnEnterItem(); });
+            trigger.triggers.Add(entry2);
+
+            EventTrigger.Entry entry3 = new EventTrigger.Entry();
+            entry3.eventID = EventTriggerType.PointerExit;
+            entry3.callback.AddListener((_eventData) => { OnExitItem(); });
+            trigger.triggers.Add(entry3);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnterItem()
     {
-        
+        Cursor.SetCursor(swordCursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void OnExitItem()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void OnClickItem()
+    {
     }
 }
