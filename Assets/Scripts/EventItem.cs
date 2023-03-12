@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using TMPro;
 
 public class EventItem : MonoBehaviour
 {
@@ -22,5 +25,21 @@ public class EventItem : MonoBehaviour
         GameObject thumbnailObj = gameObject.transform.Find("Thumbnail").gameObject;
         EventThumbnail eventThumbnail = thumbnailObj.GetComponent<EventThumbnail>();
         eventThumbnail.SetThumbnail(item.thumbnail);
+
+        // —j“ú
+        GameObject dayOfWeekObj = gameObject.transform.Find("DayOfWeek").gameObject;
+        TextMeshProUGUI dayOfWeekLabel = dayOfWeekObj.GetComponent<TextMeshProUGUI>();
+        bool[] boolArray = new bool[7] { item.monday, item.tuesday, item.wednesday, item.thursday, item.fryday, item.saturday, item.sunday };
+        string[] labelArray = new string[7] { "ŒŽ", "‰Î", "…", "–Ø", "‹à", "“y", "“ú" };
+        foreach (var (label, index) in labelArray.Select((label, index) => (label, index))) {
+            if (!boolArray[index])
+            {
+                labelArray[index] = null;
+            }
+        }
+        List<string> displayLabelArray = new List<string>(labelArray);
+        displayLabelArray.RemoveAll(item => String.IsNullOrEmpty(item));
+
+        dayOfWeekLabel.text = String.Join(" ", displayLabelArray);
     }
 }
