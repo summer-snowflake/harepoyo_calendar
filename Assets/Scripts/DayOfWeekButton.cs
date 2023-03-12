@@ -29,8 +29,10 @@ public class DayOfWeekButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CheckDayOfWeek();
+        // デフォルトでは今日の曜日を表示
+        CheckDayOfWeek("" + DateTime.Now.DayOfWeek);
 
+        // マウスイベントの登録
         gameObject.AddComponent<EventTrigger>();
         EventTrigger trigger = GetComponent<EventTrigger>();
         EventTrigger.Entry entry1 = new EventTrigger.Entry();
@@ -52,26 +54,35 @@ public class DayOfWeekButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 1秒ごとに今日の曜日を確認し、今日の曜日のボタンをハイライト
-        currentTime += Time.deltaTime;
-        if (currentTime > ONE)
-        {
-            CheckDayOfWeek();
-        }
     }
 
-    void CheckDayOfWeek()
+    void CheckDayOfWeek(string targetDayOfWeek)
     {
-        if (weekInfo.name == ("" + DateTime.Now.DayOfWeek))
+        Week week = transform.parent.gameObject.GetComponent<Week>();
+        Week.WeekInfo[] days = week.weekArray;
+        for (int i = 0; i < days.Length; i++)
         {
-            Image img = GetComponent<Image>();
-            img.material = brighten;
+            GameObject child = transform.parent.GetChild(i).gameObject;
+            Image img = child.GetComponent<Image>();
+
+            if (child.GetComponent<DayOfWeekButton>().weekInfo.name == targetDayOfWeek)
+            {
+                img.material = brighten;
+            }
+            else
+            {
+                img.material = null;
+            }
         }
         currentTime = 0f;
     }
 
     void OnClickItem()
     {
+        // 曜日ボタンハイライト
+        CheckDayOfWeek(weekInfo.name);
+
+        // イベント一覧表示
         GameObject obj = GameObject.Find("EventDBManager").gameObject;
         EventDBManager eventDBManager = obj.GetComponent<EventDBManager>();
         eventDBManager.SetEventItems(weekInfo.name);
