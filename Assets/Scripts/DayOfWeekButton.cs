@@ -13,8 +13,6 @@ public class DayOfWeekButton : MonoBehaviour
 
     TextMeshProUGUI titleText;
     Week.WeekInfo weekInfo;
-    float currentTime = 0f;
-    const int ONE = 1;
 
     public void SetItem(Week.WeekInfo info)
     {
@@ -74,7 +72,6 @@ public class DayOfWeekButton : MonoBehaviour
                 img.material = null;
             }
         }
-        currentTime = 0f;
     }
 
     void OnClickItem()

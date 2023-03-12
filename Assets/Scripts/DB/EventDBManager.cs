@@ -40,7 +40,7 @@ public class EventDBManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-            for (int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             // イベントデータを取得
             Event e = ScriptableObject.CreateInstance("Event") as Event;
@@ -56,6 +56,9 @@ public class EventDBManager : MonoBehaviour
             // データを表示
             EventItem item = obj.GetComponent<EventItem>();
             item.SetEvent(e);
+
+            // キーの割り当て
+            item.GenerateKey(e, dayOfWeek);
         }
 
         // スクロール位置を上部に移動
