@@ -42,4 +42,8 @@ public class Event : ScriptableObject
                 return false;
         }
     }
+    public string TimeLabel ()
+    {
+        return $"{ startTime } ～ { endTime }";
+    }
 }

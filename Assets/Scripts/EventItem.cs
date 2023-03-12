@@ -41,5 +41,12 @@ public class EventItem : MonoBehaviour
         displayLabelArray.RemoveAll(item => String.IsNullOrEmpty(item));
 
         dayOfWeekLabel.text = String.Join(" ", displayLabelArray);
+
+        // ŽžŠÔ‘Ñ
+        GameObject backGroundObj = gameObject.transform.Find("TimeZoneBackGround").gameObject;
+        GameObject timeZoneObj = backGroundObj.transform.Find("TimeZone").gameObject;
+
+        TextMeshProUGUI timeZoneLabel = timeZoneObj.GetComponent<TextMeshProUGUI>();
+        timeZoneLabel.text = item.TimeLabel();
     }
 }
