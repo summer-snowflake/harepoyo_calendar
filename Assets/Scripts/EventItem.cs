@@ -8,14 +8,26 @@ using TMPro;
 public class EventItem : MonoBehaviour
 {
     Event item;
+    string key;
 
     public void SetEvent(Event e)
     {
         item = e;
     }
+
+    public void GenerateKey(Event e, string dayOfWeek)
+    {
+        key = "key-" + dayOfWeek + "-" + e.id;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        // チェックボックスのチェック
+        GameObject toggleObj = gameObject.transform.Find("Toggle").gameObject;
+        EventCheckbox eventCheckbox = toggleObj.GetComponent<EventCheckbox>();
+        eventCheckbox.LoadCheck(key);
+
         // タイトル
         GameObject textObj = gameObject.transform.Find("Title").gameObject;
         EventTitle eventTitle = textObj.GetComponent<EventTitle>();
