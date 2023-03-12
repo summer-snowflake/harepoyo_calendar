@@ -6,6 +6,7 @@ public class Week : MonoBehaviour
 {
     public GameObject weekButton;
     GameObject obj;
+    public WeekInfo[] weekArray = new WeekInfo[7];
 
     public struct WeekInfo
     {
@@ -17,8 +18,6 @@ public class Week : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        WeekInfo[] weekArray = new WeekInfo[7];
         weekArray[0] = new WeekInfo() { id = 1, name = "Monday", value = "åé" };
         weekArray[1] = new WeekInfo() { id = 2, name = "Tuesday", value = "âŒ" };
         weekArray[2] = new WeekInfo() { id = 3, name = "Wednesday", value = "êÖ" };
