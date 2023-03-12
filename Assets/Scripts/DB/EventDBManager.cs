@@ -20,6 +20,10 @@ public class EventDBManager : MonoBehaviour
     void Start()
     {
         int count = eventDataBase.eventList.Count;
+
+        //eventDataBase.eventList.Find(itemName => itemName.sunday);
+
+
         grandObject = content.transform.parent.parent.gameObject;
         ScrollRect scrollRect = grandObject.GetComponent<ScrollRect>();
 

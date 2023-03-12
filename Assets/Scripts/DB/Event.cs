@@ -15,7 +15,7 @@ public class Event : ScriptableObject
     [Header("火曜日")] public bool tuesday;
     [Header("水曜日")] public bool wednesday;
     [Header("木曜日")] public bool thursday;
-    [Header("金曜日")] public bool fryday;
+    [Header("金曜日")] public bool fryday; // TODO
     [Header("土曜日")] public bool saturday;
     [Header("日曜日")] public bool sunday;
 }
