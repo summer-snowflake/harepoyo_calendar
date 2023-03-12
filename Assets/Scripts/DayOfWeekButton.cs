@@ -72,7 +72,9 @@ public class DayOfWeekButton : MonoBehaviour
 
     void OnClickItem()
     {
-        Debug.Log("click");
+        GameObject obj = GameObject.Find("EventDBManager").gameObject;
+        EventDBManager eventDBManager = obj.GetComponent<EventDBManager>();
+        eventDBManager.SetEventItems(weekInfo.name);
     }
 
     void OnEnterItem()

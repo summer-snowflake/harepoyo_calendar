@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,4 +19,27 @@ public class Event : ScriptableObject
     [Header("金曜日")] public bool fryday; // TODO
     [Header("土曜日")] public bool saturday;
     [Header("日曜日")] public bool sunday;
+
+    public bool GetTarget(string dayOfWeek)
+    {
+        switch (dayOfWeek)
+        {
+            case "Monday":
+                return monday;
+            case "Tuesday":
+                return tuesday;
+            case "Wednesday":
+                return wednesday;
+            case "Thursday":
+                return thursday;
+            case "Friday":
+                return fryday;
+            case "Saturday":
+                return saturday;
+            case "Sunday":
+                return sunday;
+            default:
+                return false;
+        }
+    }
 }

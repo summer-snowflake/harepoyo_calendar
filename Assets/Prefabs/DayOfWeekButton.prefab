@@ -227,3 +227,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brighten: {fileID: 2100000, guid: 0dfbf86ae9fc7bc48ba7477703ef428b, type: 2}
   swordCursor: {fileID: 2800000, guid: a2f5dc4cd6de03240881de24dbc607ac, type: 3}
+  eventDBManager: {fileID: 650510943163520620, guid: ada5e2d0aaaf39a4292e293670c30ae6, type: 3}
