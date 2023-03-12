@@ -19,6 +19,11 @@ public class ButtonCommon : MonoBehaviour
         obj.SetActive(false);
     }
 
+    public void onClickIcon()
+    {
+        obj.SetActive(true);
+    }
+
     public void MouseOver()
     {
         img.material = brighten;
