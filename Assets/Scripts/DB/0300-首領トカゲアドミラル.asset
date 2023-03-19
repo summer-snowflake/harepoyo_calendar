@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c82475d42d43a464caba9057abdc3c1b, type: 3}
-  m_Name: "2001-\u30DA\u30C3\u30C8\u9451\u5B9A\u56E3 1"
+  m_Name: "0300-\u9996\u9818\u30C8\u30AB\u30B2\u30A2\u30C9\u30DF\u30E9\u30EB"
   m_EditorClassIdentifier: 
-  id: 20
-  title: "\u30DA\u30C3\u30C8\u9451\u5B9A\u56E3"
-  thumbnail: {fileID: 21300000, guid: 1275ab18f7df14c41876f8b20671647e, type: 3}
-  startTime: 20:01
-  endTime: 20:31
-  monday: 1
-  tuesday: 1
-  wednesday: 1
+  id: 33
+  title: "<\u9996\u9818> \u30C8\u30AB\u30B2\u30A2\u30C9\u30DF\u30E9\u30EB\uFF08\u65E5\u66AE\u306E\u5CF0\uFF09"
+  thumbnail: {fileID: 21300000, guid: 58c60636b69fc3f40b7ecb0239af7e3c, type: 3}
+  startTime: 03:00
+  endTime: 
+  monday: 0
+  tuesday: 0
+  wednesday: 0
   thursday: 1
-  fryday: 1
-  saturday: 1
-  sunday: 1
+  fryday: 0
+  saturday: 0
+  sunday: 0
