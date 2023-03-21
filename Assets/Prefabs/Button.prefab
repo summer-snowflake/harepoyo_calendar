@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u30AD\u30E3\u30F3\u30BB\u30EB"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82813f1595fef8e41bca7e7a81de68c5, type: 2}
   m_sharedMaterial: {fileID: -6797451426043076628, guid: 82813f1595fef8e41bca7e7a81de68c5, type: 2}
@@ -305,6 +305,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3764042458104930184}
+          m_TargetAssemblyTypeName: ButtonCommon, Assembly-CSharp
+          m_MethodName: SetDisabled
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &3764042458104930184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brighten: {fileID: 2100000, guid: 0dfbf86ae9fc7bc48ba7477703ef428b, type: 2}
+  obj: {fileID: 0}
 --- !u!212 &821321066530150622
 SpriteRenderer:
   m_ObjectHideFlags: 0

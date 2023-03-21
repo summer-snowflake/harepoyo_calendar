@@ -6,7 +6,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     public NotificationSender notificationSender;
-    public float interval = 2.0f;
+    float interval = 200.0f;
     private float timer = 0.0f;
 
     // Start is called before the first frame update
