@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -21,9 +21,9 @@ public class UpdateDefaultButton : MonoBehaviour
     public void OnClickButton()
     {
         Modal modal = modalObj.GetComponent<Modal>();
-        modal.SetMessage("İ’è‚ğ‰Šú’l‚É–ß‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H");
+        modal.SetMessage("è¨­å®šã‚’åˆæœŸå€¤ã«æˆ»ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ");
 
-        // Šm’èƒ{ƒ^ƒ“‚Éˆ—‚ğ’Ç‰Á
+        // ç¢ºå®šãƒœã‚¿ãƒ³ã«å‡¦ç†ã‚’è¿½åŠ 
         GameObject buttonObj = modal.transform.Find("SubmitButton").gameObject;
         EventTrigger eventTrigger = buttonObj.GetComponent<EventTrigger>();
         List<EventTrigger.Entry> entryList = eventTrigger.triggers;
@@ -33,9 +33,10 @@ public class UpdateDefaultButton : MonoBehaviour
         {
             Submit();
         });
-
     }
 
+    // åˆæœŸå€¤ã«æˆ»ã™
+    // ãƒ»é€šçŸ¥ã‚¿ã‚¤ãƒŸãƒ³ã‚°ï¼ˆ5åˆ†å‰ï¼‰
     public void Submit()
     {
         Debug.Log("submit");
