@@ -6,17 +6,8 @@ using UnityEngine.EventSystems;
 public class UpdateDefaultButton : MonoBehaviour
 {
     public GameObject modalObj;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject panelObject;
+    const int ONE = 1;
 
     public void OnClickButton()
     {
@@ -39,6 +30,34 @@ public class UpdateDefaultButton : MonoBehaviour
     // ・通知タイミング（5分前）
     public void Submit()
     {
-        Debug.Log("submit");
+        // 設定を削除
+        PlayerPrefs.DeleteKey("custom");
+        PlayerPrefs.DeleteKey("key-ThreeMinutesAgo");
+        PlayerPrefs.DeleteKey("key-OneMinuteAgo");
+        PlayerPrefs.DeleteKey("key-Just");
+
+        // 初期値
+        PlayerPrefs.SetInt("key-FiveMinutesAgo", ONE);
+
+        // チェックボックスの更新
+        // 5分前
+        GameObject fiveObj = panelObject.transform.Find("FiveMinutesAgo").gameObject;
+        SettingCheckbox fiveSetting = fiveObj.GetComponent<SettingCheckbox>();
+        fiveSetting.LoadCheck();
+
+        // 3分前
+        GameObject threeObj = panelObject.transform.Find("ThreeMinutesAgo").gameObject;
+        SettingCheckbox threeSetting = threeObj.GetComponent<SettingCheckbox>();
+        threeSetting.LoadCheck();
+
+        // 1分前
+        GameObject oneObj = panelObject.transform.Find("OneMinuteAgo").gameObject;
+        SettingCheckbox oneSetting = oneObj.GetComponent<SettingCheckbox>();
+        oneSetting.LoadCheck();
+
+        // 0分前
+        GameObject justObj = panelObject.transform.Find("Just").gameObject;
+        SettingCheckbox justSetting = justObj.GetComponent<SettingCheckbox>();
+        justSetting.LoadCheck();
     }
 }

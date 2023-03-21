@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,26 +23,26 @@ public class EventItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚Ìƒ`ƒFƒbƒN
+        // ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã®ãƒã‚§ãƒƒã‚¯
         GameObject toggleObj = gameObject.transform.Find("Toggle").gameObject;
         EventCheckbox eventCheckbox = toggleObj.GetComponent<EventCheckbox>();
         eventCheckbox.LoadCheck(key);
 
-        // ƒ^ƒCƒgƒ‹
+        // ã‚¿ã‚¤ãƒˆãƒ«
         GameObject textObj = gameObject.transform.Find("Title").gameObject;
         EventTitle eventTitle = textObj.GetComponent<EventTitle>();
         eventTitle.SetTitle(item.title);
 
-        // ƒTƒ€ƒlƒCƒ‹
+        // ã‚µãƒ ãƒã‚¤ãƒ«
         GameObject thumbnailObj = gameObject.transform.Find("Thumbnail").gameObject;
         EventThumbnail eventThumbnail = thumbnailObj.GetComponent<EventThumbnail>();
         eventThumbnail.SetThumbnail(item.thumbnail);
 
-        // —j“ú
+        // æ›œæ—¥
         GameObject dayOfWeekObj = gameObject.transform.Find("DayOfWeek").gameObject;
         TextMeshProUGUI dayOfWeekLabel = dayOfWeekObj.GetComponent<TextMeshProUGUI>();
         bool[] boolArray = new bool[7] { item.monday, item.tuesday, item.wednesday, item.thursday, item.fryday, item.saturday, item.sunday };
-        string[] labelArray = new string[7] { "Œ", "‰Î", "…", "–Ø", "‹à", "“y", "“ú" };
+        string[] labelArray = new string[7] { "æœˆ", "ç«", "æ°´", "æœ¨", "é‡‘", "åœŸ", "æ—¥" };
         foreach (var (label, index) in labelArray.Select((label, index) => (label, index))) {
             if (!boolArray[index])
             {
@@ -54,7 +54,7 @@ public class EventItem : MonoBehaviour
 
         dayOfWeekLabel.text = String.Join(" ", displayLabelArray);
 
-        // ŠÔ‘Ñ
+        // æ™‚é–“å¸¯
         GameObject backGroundObj = gameObject.transform.Find("TimeZoneBackGround").gameObject;
         GameObject timeZoneObj = backGroundObj.transform.Find("TimeZone").gameObject;
 

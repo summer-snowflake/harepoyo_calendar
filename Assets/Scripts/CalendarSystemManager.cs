@@ -1,24 +1,42 @@
+ï»¿using Growl.Connector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CalendarSystemManager : MonoBehaviour
 {
+    public GameObject panelObject;
+    const int ONE = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        if (PlayerPrefs.HasKey("custom"))
+        {
+            // 5åˆ†å‰
+            GameObject fiveObj = panelObject.transform.Find("FiveMinutesAgo").gameObject;
+            SettingCheckbox fiveSetting = fiveObj.GetComponent<SettingCheckbox>();
+            fiveSetting.LoadCheck();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+            // 3åˆ†å‰
+            GameObject threeObj = panelObject.transform.Find("ThreeMinutesAgo").gameObject;
+            SettingCheckbox threeSetting = threeObj.GetComponent<SettingCheckbox>();
+            threeSetting.LoadCheck();
 
-    // İ’è‚ğ‰Šú’l‚É–ß‚·
-    public void UpdateToDefaultSettings()
-    {
-        Debug.Log("İ’è‚ğ‰Šú’l‚É–ß‚·");
+            // 1åˆ†å‰
+            GameObject oneObj = panelObject.transform.Find("OneMinuteAgo").gameObject;
+            SettingCheckbox oneSetting = oneObj.GetComponent<SettingCheckbox>();
+            oneSetting.LoadCheck();
+
+            // 0åˆ†å‰
+            GameObject justObj = panelObject.transform.Find("Just").gameObject;
+            SettingCheckbox justSetting = justObj.GetComponent<SettingCheckbox>();
+            justSetting.LoadCheck();
+        }
+        else
+        {
+            // åˆæœŸè¨­å®š
+            PlayerPrefs.SetInt("key-FiveMinutesAgo", ONE);
+        }
     }
 }

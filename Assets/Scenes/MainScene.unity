@@ -397,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394680, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Name
-      value: OneMiniteAgo
+      value: OneMinuteAgo
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394682, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_IsOn
@@ -1046,6 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modalObj: {fileID: 1079804406}
+  panelObject: {fileID: 1959437376}
 --- !u!1 &615429502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394680, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Name
-      value: ThreeMinitesAgo
+      value: ThreeMinutesAgo
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394682, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_IsOn
@@ -2185,6 +2186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e193da50454ac144c8225b0f5dbed9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelObject: {fileID: 1959437376}
 --- !u!4 &1348488303
 Transform:
   m_ObjectHideFlags: 0
@@ -2562,7 +2564,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 921788415}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.99998707
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3273,7 +3275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0004119873
+      value: -0.0008544922
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3564,7 +3566,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8149158971783394680, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Name
-      value: FiveMinitesAgo
+      value: FiveMinutesAgo
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394683, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Pivot.x
