@@ -14,12 +14,12 @@ public class ButtonCommon : MonoBehaviour
         img = GetComponent<Image>();
     }
 
-    public void onClickButton()
+    public void SetDisabled()
     {
         obj.SetActive(false);
     }
 
-    public void onClickIcon()
+    public void SetEnabled()
     {
         obj.SetActive(true);
     }

@@ -49,11 +49,6 @@ public class DayOfWeekButton : MonoBehaviour
         trigger.triggers.Add(entry3);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     void CheckDayOfWeek(string targetDayOfWeek)
     {
         Week week = transform.parent.gameObject.GetComponent<Week>();

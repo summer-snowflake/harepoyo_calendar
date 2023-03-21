@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +8,7 @@ public class NotificationSender : MonoBehaviour
 {
     GrowlConnector growl;
     Growl.Connector.Application app = new Growl.Connector.Application("HarepoyoCalender");
-    string notificationName = "ƒCƒxƒ“ƒg’Ê’m";
+    string notificationName = "ã‚¤ãƒ™ãƒ³ãƒˆé€šçŸ¥";
 
     void Start()
     {
