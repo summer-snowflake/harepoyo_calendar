@@ -13,11 +13,6 @@ public class CalendarSystemManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("custom"))
         {
-            // 5分前
-            GameObject fiveObj = panelObject.transform.Find("FiveMinutesAgo").gameObject;
-            SettingCheckbox fiveSetting = fiveObj.GetComponent<SettingCheckbox>();
-            fiveSetting.LoadCheck();
-
             // 3分前
             GameObject threeObj = panelObject.transform.Find("ThreeMinutesAgo").gameObject;
             SettingCheckbox threeSetting = threeObj.GetComponent<SettingCheckbox>();
@@ -38,5 +33,11 @@ public class CalendarSystemManager : MonoBehaviour
             // 初期設定
             PlayerPrefs.SetInt("key-FiveMinutesAgo", ONE);
         }
+
+        // NOTE: 初期設定の場合、初期設定でない場合いずれにおいても実
+        // 5分前
+        GameObject fiveObj = panelObject.transform.Find("FiveMinutesAgo").gameObject;
+        SettingCheckbox fiveSetting = fiveObj.GetComponent<SettingCheckbox>();
+        fiveSetting.LoadCheck();
     }
 }
