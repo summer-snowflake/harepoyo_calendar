@@ -65,12 +65,22 @@ public class TimeManager : MonoBehaviour
             {
                 preStartTime = targetStartTime.AddMinutes(element).ToString("HH:mm");
 
+                string label = "";
+                if (element == 0 )
+                {
+                    label = "【!!!】";
+                }
+                else
+                {
+                    label = "【" + Math.Abs(element).ToString() + "分前】";
+                }
+
                 // 前回通知した時刻ではない、かつ、イベント通知時刻＝現在時刻
                 if (preStartTime != lastNotificationTime && preStartTime == nowTime)
                 {
                     // タイトル：イベント名
                     // メッセージ：例）【5分前】00:00～00:00
-                    notificationSender.SendNotification(list[j].title, list[j].TimeLabel());
+                    notificationSender.SendNotification(list[j].thumbnail, list[j].title, label + list[j].TimeLabel());
                     lastNotificationTime = preStartTime;
                 }
             }
