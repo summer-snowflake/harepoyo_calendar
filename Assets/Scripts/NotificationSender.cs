@@ -16,7 +16,7 @@ public class NotificationSender : MonoBehaviour
     public void SendNotification(Sprite thumbnail, string title, string message)
     {
         // TODO: アイコンをGrowlに通知する
-        byte[] image = ConvertThumbnail(thumbnail);
+        // byte[] image = ConvertThumbnail(thumbnail);
 
         Notification notification = new Notification(app.Name, notificationName, "", title, message);
         growl.Notify(notification);
