@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375325488}
-  - component: {fileID: 375325487}
+  - component: {fileID: 375325489}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -350,19 +350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &375325487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375325486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5641f635ef1054f8c7fe27d1654ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notificationSender: {fileID: 870756042}
 --- !u!4 &375325488
 Transform:
   m_ObjectHideFlags: 0
@@ -378,6 +365,20 @@ Transform:
   m_Father: {fileID: 1238727325}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375325489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375325486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5641f635ef1054f8c7fe27d1654ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventDataBase: {fileID: 11400000, guid: 768cd7fb0da39b9478c06263c50ceec8, type: 2}
+  notificationSender: {fileID: 870756042}
 --- !u!1 &467663383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7437584307693273488, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
@@ -1343,6 +1344,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a091509b17ca7764e9fcc8dbbda67ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &684421369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684421371}
+  - component: {fileID: 684421372}
+  m_Layer: 0
+  m_Name: TaskTray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684421371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684421369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1238727325}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684421372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684421369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8609f89cce0dcb542a1be1d1a7080bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconTexture: {fileID: 2800000, guid: 73d638e6939eadc4bb4aed0ccfafa652, type: 3}
 --- !u!1001 &706230690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2137,6 +2183,7 @@ Transform:
   - {fileID: 850720916}
   - {fileID: 870756043}
   - {fileID: 375325488}
+  - {fileID: 684421371}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2563,7 +2610,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 921788416}
   m_HandleRect: {fileID: 921788415}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3275,7 +3322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0008544922
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3567,6 +3614,10 @@ PrefabInstance:
     - target: {fileID: 8149158971783394680, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Name
       value: FiveMinutesAgo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149158971783394682, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
+      propertyPath: m_IsOn
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8149158971783394683, guid: b0f79ae473092c74993ffafbf23da7f6, type: 3}
       propertyPath: m_Pivot.x
