@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 30
   title: "<\u9996\u9818> \u30D5\u30EB\u30FC\u30EB\u30ED\u30FC\u30C9\u30E1\u30A4\u30B8\uFF08\u9280\u8840\u306E\u6CCA\uFF09"
-  thumbnail: {fileID: 21300000, guid: 58c60636b69fc3f40b7ecb0239af7e3c, type: 3}
+  thumbnail: {fileID: 21300000, guid: e6981a766ffbe7846b31d8ed1e0ec09b, type: 3}
   startTime: 21:00
   endTime: 
   monday: 0
