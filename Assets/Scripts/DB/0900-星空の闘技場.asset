@@ -17,10 +17,10 @@ MonoBehaviour:
   thumbnail: {fileID: 21300000, guid: 58c60636b69fc3f40b7ecb0239af7e3c, type: 3}
   startTime: 09:01
   endTime: 09:30
-  sunday: 1
   monday: 1
   tuesday: 1
   wednesday: 1
   thursday: 1
   fryday: 1
   saturday: 1
+  sunday: 1
