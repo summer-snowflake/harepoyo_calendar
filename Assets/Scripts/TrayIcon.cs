@@ -8,6 +8,8 @@ using System.Collections;
 using UnityEngine;
 using Application = UnityEngine.Application;
 
+#pragma warning disable 0618
+
 public class TrayIcon : MonoBehaviour
 {
     public Texture2D iconTexture;
