@@ -91,10 +91,13 @@ public class TrayIcon : MonoBehaviour
 
     IEnumerator QuitAfterDelay(float delay)
     {
+        // アプリケーションをアクティブに設定
+        GetActiveWindow();
+
         // delay秒待機
         yield return new WaitForSeconds(delay);
 
-        // 処理が完了したらアプリを終了する
+        // 処理が完了したらアプリを終了
         Application.Quit();
     }
 

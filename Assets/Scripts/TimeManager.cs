@@ -11,7 +11,6 @@ public class TimeManager : MonoBehaviour
     float interval = 10.0f;
     private float timer = 0.0f;
     int lastNotificationEventId;
-    string lastNotificationTime;
     List<Event> list;
 
     // Update is called once per frame
@@ -76,36 +75,13 @@ public class TimeManager : MonoBehaviour
                     label = "【" + Math.Abs(element).ToString() + "分前】";
                 }
 
-                // イベント通知時刻=現在時刻
-                if (preStartTime == nowTime)
+                // 現在時刻=イベント通知時刻 かつ 現在時刻が前回通知したイベント通知時刻と一致しない
+                if (nowTime == preStartTime && now.ToString("yyyy/MM/dd HH:mm") != list[j].lastNotificationTime)
                 {
-                    // 前回通知したイベントだった場合
-                    if (list[j].id == lastNotificationEventId)
-                    {
-                        // 現在時刻が前回通知した時刻と一致しない場合に通知
-                        if (now.ToString("yyyy/MM/ dd HH:mm") != lastNotificationTime)
-                        {
-                            // タイトル：イベント名
-                            // メッセージ：例）【5分前】00:00～00:00
-                            notificationSender.SendNotification(list[j].thumbnail, list[j].title, label + list[j].TimeLabel());
-                            lastNotificationTime = now.ToString("yyyy/MM/dd HH:mm");
-                            lastNotificationEventId = list[j].id;
-                        }
-                    }
-                    else
-                    {
-                        // 現在時刻がイベント通知時刻と一致する場合に通知
-                        if (nowTime == preStartTime)
-                        {
-                            // タイトル：イベント名
-                            // メッセージ：例）【5分前】00:00～00:00
-                            notificationSender.SendNotification(list[j].thumbnail, list[j].title, label + list[j].TimeLabel());
-                            lastNotificationTime = now.ToString("yyyy/MM/dd HH:mm");
-                            lastNotificationEventId = list[j].id;
-                        }
-
-                    }
-
+                    // タイトル：イベント名
+                    // メッセージ：例）【5分前】00:00～00:00
+                    notificationSender.SendNotification(list[j].thumbnail, list[j].title, label + list[j].TimeLabel());
+                    list[j].lastNotificationTime = now.ToString("yyyy/MM/dd HH:mm");
                 }
             }
         }
