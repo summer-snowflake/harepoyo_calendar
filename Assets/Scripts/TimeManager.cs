@@ -10,7 +10,7 @@ public class TimeManager : MonoBehaviour
     public NotificationSender notificationSender;
     float interval = 10.0f;
     private float timer = 0.0f;
-    string lastNotificationTime;
+    int lastNotificationEventId;
     List<Event> list;
 
     // Update is called once per frame
@@ -75,13 +75,13 @@ public class TimeManager : MonoBehaviour
                     label = "【" + Math.Abs(element).ToString() + "分前】";
                 }
 
-                // 前回通知した時刻ではない、かつ、イベント通知時刻＝現在時刻
-                if (preStartTime != lastNotificationTime && preStartTime == nowTime)
+                // 前回通知したイベントではない、かつ、イベント通知時刻＝現在時刻
+                if (list[j].id != lastNotificationEventId && preStartTime == nowTime)
                 {
                     // タイトル：イベント名
                     // メッセージ：例）【5分前】00:00～00:00
                     notificationSender.SendNotification(list[j].thumbnail, list[j].title, label + list[j].TimeLabel());
-                    lastNotificationTime = preStartTime;
+                    lastNotificationEventId = list[j].id;
                 }
             }
         }
