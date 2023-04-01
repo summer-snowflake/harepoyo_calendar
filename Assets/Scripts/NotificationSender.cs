@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using Growl.Connector;
+using Growl.CoreLibrary;
+using System.Collections;
 
 public class NotificationSender : MonoBehaviour
 {
@@ -15,14 +17,14 @@ public class NotificationSender : MonoBehaviour
 
     public void SendNotification(Sprite thumbnail, string title, string message)
     {
-        // TODO: アイコンをGrowlに通知する
-        // byte[] image = ConvertThumbnail(thumbnail);
-
         Notification notification = new Notification(app.Name, notificationName, "", title, message);
+        Resource image = ConvertThumbnail(thumbnail);
+        notification.Icon = image;
+
         growl.Notify(notification);
     }
 
-    byte[] ConvertThumbnail(Sprite thumbnail)
+    BinaryData ConvertThumbnail(Sprite thumbnail)
     {
         // SpriteをTexture2Dに変換
         Texture2D texture = thumbnail.texture;
@@ -33,6 +35,9 @@ public class NotificationSender : MonoBehaviour
         texture.Apply();
 
         // Texture2DをPNG形式のbyte配列に変換
-        return texture.EncodeToPNG();
+        byte[] byteImage = texture.EncodeToPNG();
+
+        // byte配列をBinaryDataに変換
+        return new BinaryData(byteImage);
     }
 }
