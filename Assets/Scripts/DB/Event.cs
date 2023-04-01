@@ -19,6 +19,7 @@ public class Event : ScriptableObject
     [Header("金曜日")] public bool fryday; // TODO
     [Header("土曜日")] public bool saturday;
     [Header("日曜日")] public bool sunday;
+    [Header("前回通知した時刻")] public string lastNotificationTime = "";
 
     public bool GetTarget(string dayOfWeek)
     {
