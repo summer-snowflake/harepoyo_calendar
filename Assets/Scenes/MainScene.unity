@@ -2747,7 +2747,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 921788415}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.9997265
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3458,7 +3458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00077819824
+      value: -0.0006866455
       objectReference: {fileID: 0}
     - target: {fileID: 7437584307693273491, guid: 2d112bdc1f339034c93059829e64daa8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3489,6 +3489,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 363117253}
     m_Modifications:
+    - target: {fileID: 551875502991041050, guid: 3ec27d4930ce5814eb60a5801830c344, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 551875503294045434, guid: 3ec27d4930ce5814eb60a5801830c344, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2887953995592684416, guid: 3ec27d4930ce5814eb60a5801830c344, type: 3}
       propertyPath: m_Name
       value: Modal
